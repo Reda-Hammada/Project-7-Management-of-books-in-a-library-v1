@@ -64,6 +64,7 @@
                                       <label for="auteur" class="form-label">Auteur</label>
                                       <input type="text" class="form-control" id="auteur">
                                     </div>
+                
                                     <div class="col-6">
                                       <label for="prix" class="form-label">prix</label>
                                       <input type="number" class="form-control" id="prix" >
@@ -73,7 +74,32 @@
                                       <label for="date" class="form-label">Date de sortie</label>
                                       <input type="date" class="form-control" id="date">
                                     </div>
-                                   
+                                    <div class="col-6">
+                                        <label for="list" class="form-label">Language :</label>
+                                        <select>
+                                            <option></option>
+                                            <option value="Arabe">Arabe</option>
+                                            <option value="Français">Français</option>
+                                            <option value="Anglais">Anglais</option>
+                                        </select>
+                                      </div>
+                                      <div class="col-12">
+                                          <div class="form-check">
+                                            <input name="book-roman" type="radio" id="roman">
+                                            <label  for="roman" class="form-label">Roman</label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input name="book-essai" type="radio" id="essai">
+                                            <label for="essai" class="form-label">Essai</label>
+                                          </div>
+                                          <div class="form-check">
+                                            <input name="book-bande-dessinee" type="radio" id="Bande-Dessinée">
+                                            <label for="Bande-Dessinée" class="form-label">Bande-Dessinée</label>
+                                          </div>
+                                        
+                                        
+                                        
+                                      </div>
                                     <div class="col-12">
                                       <button type="submit" class="btn btn-success">Ajouter</button>
                                     </div>
@@ -96,6 +122,8 @@
                                             <th>Auteur</th>
                                             <th>Prix</th>
                                             <th>Date de sortie </th>
+                                            <th>Type</th>
+                                            <th>Language</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -105,6 +133,8 @@
                                             <th>Auteur</th>
                                             <th>Prix</th>
                                             <th>Date de sortie </th>
+                                            <th>Type</th>
+                                            <th>Language</th>
                                            
                                         </tr>
                                     </tfoot>
@@ -114,37 +144,49 @@
                                             <td>Auteur 1</td>
                                             <td>100</td>
                                             <td>01/02/1999</td>
+                                            <td>Roman</td>
+                                            <td>Anglais</td>
                                             <th>
+                                            
                                                 <button class="btn btn-success">Modifier</button>
                                                 <button class="btn btn-danger">Supprimer</button>
                                             </th>
                                         </tr>
                                         <tr>
-                                            <td>Livre 2</td>
-                                            <td>Auteur 2</td>
-                                            <td>200</td>
+                                            <td>Livre 1</td>
+                                            <td>Auteur 1</td>
+                                            <td>100</td>
                                             <td>01/02/1999</td>
+                                            <td>Roman</td>
+                                            <td>Anglais</td>
                                             <th>
+                                            
                                                 <button class="btn btn-success">Modifier</button>
                                                 <button class="btn btn-danger">Supprimer</button>
                                             </th>
                                         </tr>
                                         <tr>
-                                            <td>Livre 3</td>
-                                            <td>Auteur 2</td>
-                                            <td>200</td>
+                                            <<td>Livre 1</td>
+                                            <td>Auteur 1</td>
+                                            <td>100</td>
                                             <td>01/02/1999</td>
+                                            <td>Roman</td>
+                                            <td>Anglais</td>
                                             <th>
+                                            
                                                 <button class="btn btn-success">Modifier</button>
                                                 <button class="btn btn-danger">Supprimer</button>
                                             </th>
                                         </tr>
                                         <tr>
-                                            <td>Livre 4</td>
-                                            <td>Auteur 2</td>
-                                            <td>200</td>
+                                            <td>Livre 1</td>
+                                            <td>Auteur 1</td>
+                                            <td>100</td>
                                             <td>01/02/1999</td>
+                                            <td>Roman</td>
+                                            <td>Anglais</td>
                                             <th>
+                                            
                                                 <button class="btn btn-success">Modifier</button>
                                                 <button class="btn btn-danger">Supprimer</button>
                                             </th>
