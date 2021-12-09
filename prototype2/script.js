@@ -41,8 +41,22 @@ function insertNewRow(work) {
     cell6 = newRow.insertCell(5)
     cell6.innerHTML = work.type
     cell7 = newRow.insertCell(6)
+    cell7.innerHTML = "<button onclick ='Edit(this)'>Update</button> <button onclick='Delete(this)'>Delete</button>"
+ 
+
+}
+
+function Edit(){
 
 
 }
 
+function Delete(){
+    if(confirm("Are you sure you want to delete this")){
+    
 
+
+    }
+
+
+}
