@@ -4,8 +4,8 @@ Library manager app(CRUD) that can help the librarian to manage the books in the
 ## Built with 
 - HTML5  
 - CSS3  
--Javascript  
--Boostrap v5.  
+- Javascript  
+- Boostrap v5.  
 ## Author 
 Reda Hammada
 -Github: [Redahm](https://github.com/RedaHm).  
