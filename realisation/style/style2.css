@@ -31,15 +31,16 @@
     color: #fff;
 }
 
-.formSubmit{
+#form-container{
 
-    display: none;
+    display: none ;
 }
+
 
 
 @media  only screen and (max-width:800px) {
 
-    #inputDate{
+    #th-date{
 
         display: none;
     }
