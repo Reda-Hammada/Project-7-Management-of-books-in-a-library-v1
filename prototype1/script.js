@@ -43,6 +43,7 @@ function insertNewRow(work) {
     cell7 = newRow.insertCell(6)
 
 
-}
 
+    
+}
 
