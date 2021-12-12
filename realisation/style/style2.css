@@ -1,0 +1,47 @@
+#navbar1 {
+
+    background-color: #189AB4;
+}
+
+#loged {
+
+    color: #fff;
+}
+
+#navbar2{
+
+    background-color: #05445E;
+}
+
+#nouveau-button {
+
+    background-color: #189AB4;
+    border-radius: 9px;
+    width:  120px;
+    border-style: hidden;
+    height: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+
+}
+
+#ajouter-button {
+
+    background-color: #189AB4;
+    color: #fff;
+}
+
+.formSubmit{
+
+    display: none;
+}
+
+
+@media  only screen and (max-width:800px) {
+
+    #inputDate{
+
+        display: none;
+    }
+    
+}
