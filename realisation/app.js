@@ -71,12 +71,12 @@ function insertWork(work) {
     var editButton = document.createElement("button")
     var deleteButton = document.createElement("button")
 
-    var editContent = document.createTextNode("Edit")
+    var editContent = document.createTextNode("Modifier")
     editButton.appendChild(editContent)
     editButton.className = "btn btn-info"
     editButton.setAttribute('onclick', 'edit(this)')
 
-    var deleteContent = document.createTextNode('Delete')
+    var deleteContent = document.createTextNode('Suprimer')
     deleteButton.appendChild(deleteContent)
     deleteButton.className = "btn btn-info"
     deleteButton.setAttribute("onclick", 'deleteData(this)')
