@@ -1,7 +1,18 @@
+var selectedRow = null;
 document.getElementById("formSubmit").addEventListener("submit", function(event){
     event.preventDefault();
     var work = workData();
-    insertWork(work);
+    if(selectedRow === null){
+        insertWork(work);
+        resetForm();
+
+
+    }
+
+    else {
+
+
+    }
 
 });
 
@@ -33,7 +44,41 @@ function insertWork(work) {
     cell3 = row.insertCell(2).innerHtML = work.price;
     cell4 = row.insertCell(3).innerHTML = work.date;
     cell5 = row.insertCell(4).innerHTML = work.language;
-    cell6 = row.insertCell(5).innerHTML = "<button>modifier</button> <button>suprimer</button>";
+    cell6 = row.insertCell(5).innerHTML = work.type;
+    cell7 = row.insertCell(6).innerHTML = "<button>modifier</button> <button onclick = deleteData(this);>suprimer</button>";
 
 };
+
+function resetForm(){
+
+    document.getElementById("inputTitle").value  = "";
+    document.getElementById("inputAuthor").value  = "";
+    document.getElementById("inputPrix").value  = "";
+    document.getElementById("inputDate").value  = "";
+    document.getElementById("inputLanguage").value  = "";
+    document.getElementsByName("workType").value = "";
+}
+
+
+//Edit Data 
+
+function edit(td){
+
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById('inputTitle').value = selectedRow.cells[0].innerHTML;
+    d
+
+}
+
+
+// Delete Data
+
+function deleteData(td){
+
+    if(confirm("Do you want to delete this data")){
+        row = td.parentElement.parentElement;
+        document.getElementById('worksTable').deleteRow(row.rowIndex);
+    }
+};
+
 
