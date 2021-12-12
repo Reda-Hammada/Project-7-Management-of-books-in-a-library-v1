@@ -24,7 +24,7 @@ return work;
 
 }
 
-function insertWork() {
+function insertWork(work) {
 
     var table = document.getElementsByTagName('tbody')[0];
     var row = table.insertRow(table.length);
