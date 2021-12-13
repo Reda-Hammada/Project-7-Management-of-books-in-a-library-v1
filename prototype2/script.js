@@ -27,7 +27,7 @@ return work;
 
 
 function insertNewRow(work) {
-    var tableBody = document.getElementById("worksTable").getElementsByTagName('tbody')[0];
+    var tableBody = document.getElementsByTagName('tbody')[0];
     var newRow = tableBody.insertRow(tableBody.length);
     newRow.insertCell(0).innerHTML = work.title;
     cell2 = newRow.insertCell(1);
@@ -48,21 +48,13 @@ function insertNewRow(work) {
 
 }
 
-function Edit(){
-
-
-}
 
 function Delete(td){
     if(confirm("Are you sure you want to delete this")){
         
         row = td.parentElement.parentElement;
         document.getElementById("worksTable").deleteRow(row.rowIndex);
-
-
     }
-
-
 }
 
 
