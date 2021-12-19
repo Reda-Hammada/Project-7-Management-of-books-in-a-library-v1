@@ -1,18 +1,26 @@
 var selectedRow = null;
 document.getElementById("formSubmit").addEventListener("submit", function(event){
     event.preventDefault();
-    var work = workData();
-    if(selectedRow === null){
-        insertWork(work);
-        resetForm();
 
+    if(validate()){
+        var work = workData();
+        if(selectedRow === null){
+            insertWork(work);
+            resetForm();
+    
+    
+        }
+    
+        else {
+            updateWork(work);
+            resetForm();    
+        }
 
     }
-
     else {
-        updateWork(work);
-        resetForm();    
+        alert("S'il-vous-plaît remplissez tous les champs requis")
     }
+    
     
     
     
@@ -140,3 +148,31 @@ function deleteData(td){
 };
 
 
+function validate(){
+
+    var isVal = true;
+
+    if(  document.getElementById('inputTitle').value == ""){
+
+        isVal = false;
+
+    }
+
+    if (document.getElementById("inputAuthor").value == "") {
+        isVal = false;
+    } 
+    if (document.getElementById("inputPrix").value == "") {
+        isVal = false;
+    } 
+    if (document.getElementById("inputDate").value == "") {
+        isVal = false;
+    } 
+    if (document.getElementById("inputLanguage").value == "") {
+        isVal = false;
+    } 
+    if (document.querySelector('input[name="workType"]').value == null) {
+        isVal = false;
+    }  
+    return isVal;
+
+}
