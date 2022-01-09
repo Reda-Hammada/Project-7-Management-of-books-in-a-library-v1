@@ -7,13 +7,14 @@ document.getElementById("formSubmit").addEventListener("submit", function(event)
         if(selectedRow === null){
             insertWork(work);
             resetForm();
+            hide();
     
     
         }
     
         else {
             updateWork(work);
-            resetForm();    
+            resetForm();
         }
 
     }
@@ -62,6 +63,8 @@ function hide(){
 
     document.getElementById('form-container').style.display = "none";
 }
+
+
 
 
 
@@ -176,3 +179,4 @@ function validate(){
     return isVal;
 
 }
+
