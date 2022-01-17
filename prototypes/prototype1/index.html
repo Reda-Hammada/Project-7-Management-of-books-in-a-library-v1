@@ -33,53 +33,8 @@
                                     <label for="inputTitle" >Title</label>
                                     <input type="text"  id="inputTitle">
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="inputAuthor" >Author</label>
-                                    <input type="text" id="inputAuthor">
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputPrix" >Prix</label>
-                                    <input type="number" id="inputPrix">
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputDate">Date de </label>
-                                    <input type="date" id="inputDate">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputLanguage">Langue</label>
-                                    <select id="inputLanguage">
-                                        <option value="" disabled selected>choisir...</option>
-                                        <option value="français">Français</option>
-                                        <option value="anglais">Anglais</option>
-                                        <option value="arabe">Arabe</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label for="workType" class="form-label">Type</label>
-                                    <div>
-                                        <input value="Roman" name="workType" type="radio" id="gridCheck">
-                                        <label for="gridCheck">
-                                            Roman
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input value="Essai" name="workType" type="radio" id="gridCheck">
-                                        <label  for="gridCheck">
-                                            Essai
-                                        </label>
-                                    </div>
-
-                                    <div>
-                                        <input  name="workType" value="Bande-Dessinée" type="radio" id="gridCheck">
-                                        <label  for="gridCheck">
-                                            Bande-Dessinée
-                                        </label>
-                                    </div>
-
-                                </div>
-                                <div>
-                                    <button id="submitButton" type="submit">Ajouter</button>
-                                </div>
+                              
+                                   <input type="submit" value="ajouter">
                             </form>
 
                         </div>
@@ -91,13 +46,9 @@
                             <table class="table" id="worksTable">
                                 <thead>
                                     <tr>
-                                        <th>Titre</th>
-                                        <th>Auteur</th>
-                                        <th>Prix</th>
-                                        <th>Date de publication</th>
-                                        <th>Langue</th>
-                                        <th>Type</th>
-                                        <th>Actions</th>
+                                        <th>ID</th>
+                                        <th>Title</th>
+                                       
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -124,6 +75,8 @@
             </footer>
         </div>
     </div>
+    <script src="work.js"></script>
+    <script src="workManager.js"></script>
     <script src="script.js"></script>
 </body>
 
