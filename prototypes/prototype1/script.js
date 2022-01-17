@@ -1,49 +1,44 @@
-document.getElementById("formSubmit").addEventListener("submit", function (event){
+var _work = new workManager();
+
+
+document.getElementById('formSubmit').addEventListener("submit", function(event){
     event.preventDefault();
     var work = readWork();
-    insertNewRow(work)
-});
+    _work.addWork(work);
+    insertNewRow();
+    resetForm();
+   
+})
 
 
-
-function readWork(){
-
-    var work = {};
-    work["title"] = document.getElementById("inputTitle").value;
-    work["author"] = document.getElementById("inputAuthor").value;
-    work["price"] = parseFloat(document.getElementById("inputPrix").value);
-    work["date"] = document.getElementById("inputDate").value;
-    work["language"] = document.getElementById("inputLanguage").value;
-    var cheackValues = document.getElementsByName("workType");
-    for (var i = 0; i < cheackValues.length; i++) {
-        if (cheackValues[i].checked) {
-            work["type"] = cheackValues[i].value;
-            break;
-        }
-}
-return work;
-
+    function readWork() { 
+    var work = new Work();
+    work.title = document.getElementById("inputTitle").value;
+    return work;
 }
 
+function resetForm() {
 
-function insertNewRow(work) {
-    var tableBody = document.getElementById("worksTable").getElementsByTagName('tbody')[0];
-    var newRow = tableBody.insertRow(tableBody.length);
-    newRow.insertCell(0).innerHTML = work.title;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = work.author;
-    cell3 = newRow.insertCell(2);
-    cell3.innerHTML = work.price;
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = work.date;
-    cell5 = newRow.insertCell(4);
-    cell5.innerHTML = work.language
-    cell6 = newRow.insertCell(5)
-    cell6.innerHTML = work.type
-    cell7 = newRow.insertCell(6)
-
-
-
+    document.getElementById("inputTitle").value = "";
     
 }
 
+function insertNewRow(){
+    var workList = _work.workList;
+    var tableBody = document.getElementById("worksTable").getElementsByTagName('tbody')[0];
+
+    while(tableBody.rows.length > 0){
+        tableBody.deleteRow(0);
+    }
+
+    for(var i = 0; i < workList.length; i++){
+
+        var newRow = tableBody.insertRow(tableBody.length);
+        cell1 = newRow.insertCell(0);
+        cell1.innerHTML = workList[i].id;
+        cell2 = newRow.insertCell(1);
+        cell2.innerHTML = workList[i].title;
+    }
+
+
+}
