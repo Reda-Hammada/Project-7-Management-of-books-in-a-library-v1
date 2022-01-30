@@ -8,7 +8,7 @@
         <meta name="author" content="Reda Hammada"/>
         <title>Gestion des ouvrages</title>
         <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/style2.css">
+        <link rel="stylesheet" href="./style/style2.css">
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="/prototype0/startbootstrap-sb-admin-gh-pages/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -46,7 +46,7 @@
                         <div>
                             <button id="nouveau-button">Nouveau +</button>
                         </div>
-                        <div class="card mb-4" id="form-container">
+                        <div class="card mb-4"  id="form-container">
                             <div class="card-header" >
                                 <i class="fas fa-table me-1"></i>
                               
@@ -121,17 +121,17 @@
                                             <th id="th-date">Date de sortie </th>
                                             <th>Type</th>
                                             <th>Language</th>
-                                            <th>Actions</th>
+                                            <th id="action">Actions</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id='content'>
                                         <tr>
-
                                         </tr>
                                     </tbody>
                                         
                                     
                                 </table>
+                                <button class="btn btn-secondary" onclick="onPrint()">Print</button>
                             </div>
                         </div>
                     </div>
@@ -150,6 +150,8 @@
                 </footer>
             </div>
         </div>
+        <script src="./workManager.js"></script>
+        <script src="./work.js"></script>
         <script src="app.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
